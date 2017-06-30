@@ -10,7 +10,7 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 RUN echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
 
-RUN apt-get update && apt-get install -y git php php-curl php-zip nodejs npm yarn
+RUN apt-get update && apt-get install -y git php php-curl php-zip nodejs yarn
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 RUN npm install -g gulp && npm install -g grunt-cli && npm install -g bower
